@@ -2,8 +2,7 @@ package com.bitatron.snazzyrecycling
 
 import android.view.View
 import io.reactivex.subjects.PublishSubject
-import org.koin.core.qualifier.named
-import org.koin.dsl.module
+import org.koin.dsl.module.module
 
 const val PUBLISH_SUBJECT_RECYCLER_ITEM_CLICKED = "PUBLISH_SUBJECT_RECYCLER_ITEM_CLICKED"
 
@@ -18,7 +17,7 @@ fun addViewHolder(type: RecyclerItemType, layout: Int, create: (itemView: View) 
 val snazzyRecyclingModule = module {
     factory { CoreAdapter(get(), get()) }
     factory { AsyncCoreAdapter(get(), get()) }
-    single<PublishSubject<ClickedRecyclerItem>>(named(PUBLISH_SUBJECT_RECYCLER_ITEM_CLICKED)) { PublishSubject.create() }
+    single<PublishSubject<ClickedRecyclerItem>>(PUBLISH_SUBJECT_RECYCLER_ITEM_CLICKED) { PublishSubject.create() }
     single<CoreViewHolderInflater> { CoreViewHolderInflaterImpl() }
     factory<ItemToTypeMapper> { ItemToTypeMapperImpl(recyclerItemTypeList) }
 }
