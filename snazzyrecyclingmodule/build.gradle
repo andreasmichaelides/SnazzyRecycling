@@ -5,17 +5,13 @@ apply plugin: 'com.github.dcendents.android-maven'
 
 group='com.github.andreasmichaelides'
 
-androidExtensions {
-    experimental = true
-}
-
 android {
     compileSdkVersion 28
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 28
         versionCode 1
-        versionName "1.0.3"
+        versionName "1.0.5"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
