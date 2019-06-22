@@ -6,8 +6,9 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import io.reactivex.subjects.PublishSubject
 import kotlinx.android.extensions.LayoutContainer
-import org.koin.standalone.KoinComponent
-import org.koin.standalone.inject
+import org.koin.core.KoinComponent
+import org.koin.core.inject
+import org.koin.core.qualifier.named
 
 open class CoreAdapter(
     private val viewHolderInflater: CoreViewHolderInflater,
@@ -53,7 +54,7 @@ abstract class CoreViewHolder(override val containerView: View) : RecyclerView.V
 
 abstract class ClickableCoreViewHolder(override val containerView: View) : CoreViewHolder(containerView) {
 
-    protected val itemClicked: PublishSubject<ClickedRecyclerItem> by inject(PUBLISH_SUBJECT_RECYCLER_ITEM_CLICKED)
+    protected val itemClicked: PublishSubject<ClickedRecyclerItem> by inject(named(PUBLISH_SUBJECT_RECYCLER_ITEM_CLICKED))
 
     protected lateinit var item: RecyclerItem
 
