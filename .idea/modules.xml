@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/SnazzyRecycling.iml" filepath="$PROJECT_DIR$/.idea/SnazzyRecycling.iml" />
-      <module fileurl="file://$PROJECT_DIR$/snazzyrecyclingmodule/snazzyrecyclingmodule.iml" filepath="$PROJECT_DIR$/snazzyrecyclingmodule/snazzyrecyclingmodule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SnazzyRecycling.iml" filepath="$PROJECT_DIR$/.idea/modules/SnazzyRecycling.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/snazzyrecyclingmodule/SnazzyRecycling.snazzyrecyclingmodule.iml" filepath="$PROJECT_DIR$/.idea/modules/snazzyrecyclingmodule/SnazzyRecycling.snazzyrecyclingmodule.iml" />
     </modules>
   </component>
 </project>
