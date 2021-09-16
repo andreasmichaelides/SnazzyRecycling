@@ -4,8 +4,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import androidx.viewbinding.ViewBinding
 import io.reactivex.subjects.PublishSubject
-import kotlinx.android.extensions.LayoutContainer
 import org.koin.core.component.KoinApiExtension
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
@@ -48,14 +48,14 @@ open class CoreAdapter(
 }
 
 @KoinApiExtension
-abstract class CoreViewHolder(override val containerView: View) : RecyclerView.ViewHolder(containerView), LayoutContainer,
+abstract class CoreViewHolder(binding: ViewBinding) : RecyclerView.ViewHolder(binding.root),
     KoinComponent {
 
     abstract fun bind(item: RecyclerItem)
 }
 
 @KoinApiExtension
-abstract class ClickableCoreViewHolder(override val containerView: View) : CoreViewHolder(containerView) {
+abstract class ClickableCoreViewHolder(binding: ViewBinding) : CoreViewHolder(binding) {
 
     protected val itemClicked: PublishSubject<ClickedRecyclerItem> by inject(named(PUBLISH_SUBJECT_RECYCLER_ITEM_CLICKED))
 

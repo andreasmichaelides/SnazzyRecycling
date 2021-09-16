@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/SnazzyRecycling.iml" filepath="$PROJECT_DIR$/.idea/modules/SnazzyRecycling.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/snazzyrecyclingmodule/SnazzyRecycling.snazzyrecyclingmodule.iml" filepath="$PROJECT_DIR$/.idea/modules/snazzyrecyclingmodule/SnazzyRecycling.snazzyrecyclingmodule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/git.SnazzyRecycling.iml" filepath="$PROJECT_DIR$/.idea/modules/git.SnazzyRecycling.iml" />
     </modules>
   </component>
 </project>
